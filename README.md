@@ -3,7 +3,7 @@
 a. go to "https://www.twilio.com/en-us", "start for free" and sign up account;  
 b. go to "https://www.twilio.com/en-us/blog/developers" and login, you should be directly to "https://console.twilio.com";  
 c. if you do not have a phone number of twilio, on the left, you can go to "Develop->Phone Numbers->manage->buy a number", make sure you check to allow "voice" and "SMS" for "Capabilities";  
-d. now we download our repo to local and open it in vscode, run "cd twilio" and then "npm install" to get dependencies, then create an empty file ".env";  
+d. now we download our repo to local and open it in vscode, run "cd twilio" and then "npm install" to get dependencies, then create an empty file ".env", you can then copy content from ".env-example" and configure later;  
 e. now we run ngrok: after installing ngrok, open a new Command Prompt and run "ngrok http 3000" where 3000 is project port number;  
 f. now we get the forwarding link looks like "https://7b1c-98-214-222-229.ngrok-free.app", we should add it into .env in project and webhook on twilio:  
 .env: set WEBHOOKURL with the link  
@@ -35,7 +35,7 @@ keep the project running, try to make inbound call to the number bought on twili
 
 # 4. TTS and STT:
 
-twilio has built in features for both TTS and STT:  
+twilio has built-in features for both TTS and STT:  
 TTS: for "/record", we can do "twiml.say('content')" to trigger TTS  
 STT: for "/record", we can pass "transcribe: true" and "transcribeCallback: '/transcription'" to twiml:  
 twiml.record({  
