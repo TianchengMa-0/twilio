@@ -1,4 +1,4 @@
-# 1. How to setup project locally and configure twilio:
+1. How to setup project locally and configure twilio:
 
 a. go to "https://www.twilio.com/en-us", "start for free" and sign up account;  
 b. go to "https://www.twilio.com/en-us/blog/developers" and login, you should be directly to "https://console.twilio.com";  
@@ -14,11 +14,11 @@ WEBHOOKURL: follow above instruction;
 PHONE_TO: target phone, normally your own number, format "+1XXXXXXXXXX";  
 PHONE_FROM: number purchased on twilio, format "+1XXXXXXXXXX"
 
-# 2. How to run the project and make a call:
+2. How to run the project and make a call:
 
 make sure you "cd twilio", then run "node main.js", it will make a call;
 
-# 3. expected events and console printing result:
+3. expected events and console printing result:
 
 after running "node main.js", you should see "Now listening on port 3000.";  
 then outbound call is made, console prints "Call SID: XXXXXXXXX";  
@@ -29,11 +29,11 @@ case B:
 if the patient does not pick the phone, either reject or no-answer, the system will try to send a message and prints "message sent";  
 keep the project running, try to make inbound call to the number bought on twilio, it will trigger inbound actions to play predefined message and ends the call immediately and nothing will be printed.
 
-### NOTE: when sending SMS, target phone will get voice mail, but if yuo are using free twilio account, this feature maybe restricted and will not speak expected message.
+NOTE: when sending SMS, target phone will get voice mail, but if yuo are using free twilio account, this feature maybe restricted and will not speak expected message.
 
-### NOTE: whenever we start a new ngrok, we should update both .env and twilio voice configuration webhook.
+NOTE: whenever we start a new ngrok, we should update both .env and twilio voice configuration webhook.
 
-# 4. TTS and STT:
+4. TTS and STT:
 
 twilio has built in features for both TTS and STT:  
 TTS: for "/record", we can do "twiml.say('content')" to trigger TTS  
