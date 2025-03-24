@@ -1,4 +1,4 @@
-1. How to setup project locally and configure twilio:
+# 1. How to setup project locally and configure twilio: #
 
 a. go to "https://www.twilio.com/en-us", "start for free" and sign up account;  
 b. go to "https://www.twilio.com/en-us/blog/developers" and login, you should be directly to "https://console.twilio.com";  
