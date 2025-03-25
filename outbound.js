@@ -1,4 +1,5 @@
 const twilio = require("twilio");
+const fs = require('fs');
 const VoiceResponse = require("twilio").twiml.VoiceResponse;
 require("dotenv").config();
 
@@ -36,6 +37,12 @@ function twilioRoutes(app) {
 
   // check outbound calling status and send SMS if not answered.
   app.post("/status", async (request, response) => {
+    let data = [];
+    if (fs.existsSync('outbound.json')) {
+        data = JSON.parse(fs.readFileSync('outbound.json'));
+    }
+    data.push(request.body);
+    fs.writeFileSync('outbound.json', JSON.stringify(data, null, 2));
     const answerBy = request.body.AnsweredBy;
     if (answerBy != "unknown") {
       await createMessage();

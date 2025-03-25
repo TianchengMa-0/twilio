@@ -47,3 +47,8 @@ transcribe: true,
 transcribeCallback: "/transcription",  
 });  
 by doing this, we allow transcription during the recording and result will be sent to "/transcription" to print.
+
+# 5. Bonus:
+
+after each outbound and inbound call, we add call logs to "outbound.json" and "inbound.json"  
+you can open browser and visit "http://localhost:3000/printInbound" or "http://localhost:3000/printOutbound" to check call lists
