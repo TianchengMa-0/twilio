@@ -1,5 +1,5 @@
 node -v: v22.14.0  
-npm -v: 10.9.2
+npm -v: 10.9.2  
 you can run "nvm install --lts" to install them and run "nvm use 22.14.0"
 
 # 1. How to setup project locally and configure twilio:
